@@ -28,7 +28,7 @@ int lastStoneWeight(vector<int> &stones) {
 
 //there are 2 base cases;
 int getStoneWeight() {
-    if (check_queue.size() == 0 || check_queue.size() == NULL) {
+    if (check_queue.empty()) { //or just do check_queue.empty()
         return 0;//don't forget if remainder stone is 2 (even), both stones
         //are destroyed and should return 0;
     }

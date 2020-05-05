@@ -13,6 +13,9 @@
  * Similarly, a right shift by 1 means remove the last character of s and add 
  * it to the beginning.
 */
+
+//for this problem, simply use std::rotate and operate on s since string class
+//is not mutable in c++
 using namespace std;
 string stringShift(string s, vector<vector<int>> &shift);
 string stringRotation(string s, vector<vector<int>> &rotation);
@@ -71,7 +74,7 @@ string stringShift(string s, vector<vector<int>> &shift)
     }
     else if (remainder_shifts < 0) {
         cout << "Shifting Left" << endl;
-        int abs_shift = abs(remainder_shifts);//we can't negavtives so yeah, doing abs
+        int abs_shift = abs(remainder_shifts);//we can't negatives so yeah, doing abs
         //left shift meaning take the first shifts amount of add to back
         processed_string.append(s.substr(abs_shift));
         processed_string.append(s.substr(0, abs_shift));

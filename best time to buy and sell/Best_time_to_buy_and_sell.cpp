@@ -7,6 +7,11 @@
 #define SELL 0
 using namespace std;
 //Best Time to Buy and Sell Stock II
+//the reason you can use greedy algorithm
+//because at each step you have to make the most
+//optimal decision.
+//if a price will yield max profit, you will buy at i - 1 and sell on i day
+//if it doesn't you don't do anything.
 int maxProfit(vector<int> &prices);
 int main()
 {

@@ -32,6 +32,8 @@ bool checkValidStringGreedy(string s) {
     }
     return smallest == 0;
 }
+
+//need to come back to this and think for another solution
 bool checkValidString(string s) {
     deque<char> char_q;
     stack<char> checker;
